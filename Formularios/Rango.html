@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>Range Field</h2>
+
+<p>Depending on browser support: The input type "range" can be displayed as a slider control.</p>
+
+<form>
+    <label for="vol">Volume (between 0 and 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50">
+    <output id="salida">0 a 50</output>
+</form>
+<script>
+    volumen=document.getElementById("vol");
+    volumen.addEventListener("change", cambiarrango, false);
+    function cambiarrango() {
+        var salida =document.getElementById("salida");
+        salida.innerHTML = volumen.value;
+    }
+</script>
+
+</body>
+</html>
+

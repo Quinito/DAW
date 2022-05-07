@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Formularios</title>
+ <script>
+    alert("Inicio Javascript");
+    window.addEventListener("load", iniciar, false);
+    function iniciar(){
+        alert("Inicio función iniciar");
+        fijo=document.getElementById("Fijo");
+        mobil=document.getElementById("Movil");
+        fijo.addEventListener("input", validacion, false);
+        /*El evento input se dispara cuando el valor (value) de un elemento 
+            <input>, <select>, o <textarea> ha sido cambiado. */
+        mobil.addEventListener("input", validacion, false);
+        validacion();
+ }
+ function validacion(){
+   alert("Inicio función validación");
+   //fijo.setCustomValidity('inserte al menos un número de teléfono');
+   if(fijo.value=='' && mobil.value==''){
+        alert("Campos nulos");
+        //console.log("Validacion");
+        fijo.setCustomValidity('inserte al menos un número de teléfono');
+        fijo.style.background='#FDD';
+    }
+    else{
+        alert("Algún valor");
+        fijo.setCustomValidity('');
+        fijo.style.background='#FFF';
+ }
+ }
+
+ </script>
+</head>
+<body>
+ <section>
+ <form name="registracion" method="get">
+    <label for="Fijo">Fijo</label>
+    <input type="tel" name="Fijo" id="Fijo">
+    <label for="Movil">Movil</label>
+    <input type="tel" name="Movil" id="Movil">
+    <input type="submit" id="send" value="ingresar">
+ </form>
+ </section>
+</body>
+</html>

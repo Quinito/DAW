@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Temperaturas>
+      <Madrid>
+        <temperatura>
+          <minima>12</minima>
+          <maxima>13</maxima>
+        </temperatura>
+        <incidencias>
+          <nombre>Nieve</nombre>
+          <severidad>Alta</severidad>
+        </incidencias>
+        <fecha>2020/10/6</fecha>
+      </Madrid>
+    </Temperaturas>

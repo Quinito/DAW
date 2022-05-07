@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Temperaturas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Madrid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="temperatura">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="minima">
+                      <xs:minInclusive value="-50"/>
+                      <xs:maxInclusive value="50"/>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="maxima"/>
+                    <xs:minInclusive value="-50"/>
+                    <xs:maxInclusive value="50"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="incidencias">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nombre">
+                      <xs:enumeration value="Nieve"/>
+                      <xs:enumeration value="Lluvia"/>
+                      <xs:enumeration value="Frio"/>
+                      <xs:enumeration value="Calor"/>
+                    </xs:element>
+                    <xs:element type="xs:string" name="severidad">
+                      <xs:enumeration value="Baja"/>
+                      <xs:enumeration value="Media"/>
+                      <xs:enumeration value="Alta"/>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:date" name="fecha"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

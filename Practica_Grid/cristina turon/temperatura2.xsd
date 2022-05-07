@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="temperaturas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="provincia" type="xs:string"/>
+        <xs:element name="fecha" type="xs:date"/>
+
+        
+        <xs:element name="tmpmin" type="xs:integer" >
+         <xs:simpleType>
+          <xs:restriction base="xs:integer">
+              <xs:minInclusive value="-50"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="tmpmax" type="xs:integer" >
+           <xs:minInclusive value="-50"/>
+           <xs:maxInclusive value="50"/>
+        </xs:element>
+        
+        
+        <xs:element ref="incidencias"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="incidencias" >
+    <xs:complexType>
+      <xs:sequence>
+      
+      <xs:element name="nombre" type="xs:string">
+        <xs:simpleType>
+           <xs:restriction base="xs:string">
+              <xs:enumeration value="frio"/>
+              <xs:enumeration value="nieve"/>
+              <xs:enumeration value="lluvia"/>
+              <xs:enumeration value="calor"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      
+           
+        <xs:element name="severidad" type="xs:string">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="alta"/>
+              <xs:enumeration value="media"/>
+              <xs:enumeration value="baja"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="temperaturas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="provincia" type="xs:string"/>
+        <xs:element name="fecha" type="xs:date"/>
+        <xs:element name="tmpmin">
+         <xs:simpleType>
+          <xs:restriction base="xs:integer">
+              <xs:minInclusive value="-50"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="tmpmax">
+         <xs:simpleType>
+          <xs:restriction base="xs:integer">
+              <xs:maxInclusive value="50"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element ref="incidencias"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="incidencias" >
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="nombre" type="xs:string">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="frio"/>
+                <xs:enumeration value="nieve"/>
+                <xs:enumeration value="lluvia"/>
+                <xs:enumeration value="calor"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="severidad" type="xs:string">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="alta"/>
+                <xs:enumeration value="media"/>
+                <xs:enumeration value="baja"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de documentos</title>
+    <script>
+        function iniciar(){
+            mobil=document.getElementById("mobil")
+            fijo=document.getElementById("fijo")
+            mobil.addEventListener("input",validacion,false)
+            fijo.addEventListener("input",validacion,false)
+            validacion();
+        }
+        function validacion(){
+            if(mobil.value=='' && fijo.value=='' ){
+                mobil.setCustomValidity('inserte al menos un telefono')
+                mobil.style.background='#FFDDDD' ;
+            }else{
+                mobil.setCustomValidity('');
+                mobil.style.background='#FFF' ;       
+            }
+        }
+        window.addEventListener("load",iniciar,false)
+    </script>
+</head>
+<body>
+    <section>
+        <form name ="registracion" method ="get">
+            <label for="mobil" >Telefono mobil</label>
+            <input type="tel" name="mobil" id="mobil">
+            <label for="fijo" >Telefono fijo</label>
+            <input type="tel" name="fijo" id="fijo">
+            <input type="submit"  id="send" value="ingresar">
+        </form>
+    </section>
+</body>
+</html>

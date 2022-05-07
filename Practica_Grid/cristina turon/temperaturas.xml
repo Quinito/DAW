@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<temperaturas> 
+   <provincia>
+             <nombre>madrid</nombre>
+             <fecha>2022-04-20</fecha>
+             <tmpmin>3</tmpmin>
+            <tmpmax>20</tmpmax>
+            <incidencias>
+                    <incidencia>
+                           <nombre>frio</nombre>
+                            <severidad>alta</severidad>
+                    </incidencia>
+                    <incidencia>
+                           <nombre>lluvia</nombre>
+                            <severidad>debil</severidad>
+                    </incidencia>
+            </incidencias>
+  </provincia>
+</temperaturas>

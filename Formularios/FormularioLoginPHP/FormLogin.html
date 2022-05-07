@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario de Login</title>
+
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+
+    <form action="validar.php" method="POST">
+
+        <h2>Formulario de Login</h2>
+        <input type="text" placeholder="&#128272; Usuario" name="usuario">
+        <input type="password" placeholder="&#128272; Contraseña" name="clave">
+        <input type="submit" value="ingresar">
+
+    </form>
+
+    <!--
+            Diferencia entre GET y POST:
+              - GET: Información viaja en la URL del navegador.
+              - POST: Encapsula los datos (cabeceras del navegador).
+            
+            $copyfish: complemento para copiar el texto capturado en la pantalla$
+
+            placeholder coloca la informacion a introducir y algun simbolo unicode (evita usar label).
+
+            Terminos importantes:
+
+              - Action: envia la informacion al destino indicado.
+              - Method: metodo de envio de la informacion:
+                
+                  - GET: pasa las variables en la url.
+                  - POST: las variables van ocultas (otorga mayor seguridad).
+            
+            En w3schools mirar "what is HTTP?" y saber cada parte de la url y caracteristicas de GET & POST.
+        -->
+
+</body>
+
+</html>

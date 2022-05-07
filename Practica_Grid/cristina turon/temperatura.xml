@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<temperaturas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/media/madrid/MEMORIA%20USB/cristina%20turon/temperatura.xsd">
+  <provincia>madrid</provincia>
+  <fecha>2022-04-20</fecha>
+  <tmpmin>3</tmpmin>
+  <tmpmax>70</tmpmax>
+  <incidencias>
+    <nombre>frio</nombre>
+    <severidad>alta</severidad>
+  </incidencias>
+</temperaturas>

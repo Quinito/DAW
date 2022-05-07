@@ -1,0 +1,10 @@
+Validar utilizando XML Schema un documento XML que contenga un registro de temperaturas con la siguiente estructura:
+a) El elemento principal contiene un registro de temperaturas con el nombre de la provincia, la fecha del registro, la temperatura mínima y máxima y una 
+relación de incidencias.
+b) La fecha de registro debe ser una fecha válida.
+c) La temperatura mínima no debe ser inferior a -50ºC.
+d) La temperatura máxima no debe ser superior a 50ºC.
+e) El número de incidencias no tiene límite.
+f) Las incidencias tienen un nombre que puede ser "frío", "nieve", "lluvia" o "calor".
+g) Las incidencias tienen una severidad que puede ser "alta", "media" o "baja".
+

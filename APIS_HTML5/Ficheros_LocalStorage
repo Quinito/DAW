@@ -1,0 +1,182 @@
+Me alegro mucho que vaya todo bien; ya te escribo y cuadramos una fecha para que vengas a dar una charla de tu experiencia y de cómo afrontar el trabajo para los chicos de 2º del próximo curso.
+
+Un placer:
+Joaquin
+
+https://es.stackoverflow.com/questions/272873/d%C3%B3nde-se-guardan-los-archivos-guardados-por-localstorage
+Dónde se guardan los archivos guardados por localStorage
+Formulada hace 2 años y 10 meses
+Modificada hace 2 años y 10 meses
+Vista 1k veces
+3
+
+Tengo una duda de donde se guardan los archivos guardados con localStorage. Adjunto el código utilizado hasta ahora. Muchas gracias a todos espero que me podáis dar una respuesta. Seguro que hay alguna manera de averiguar en donde está la ruta del archivo.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <section id="editable" >
+            <h2>Escribe tu pedido:</h2>
+            <ul contenteditable id="listacompra">
+                <li>2 bolsas de patatas</li>
+                <li>1 dónut</li>
+                <li>4 Kg. de boniatos</li>
+            </ul><br><br>
+            <input type="button" id="guardar" value="guardar">
+        </section>
+        <script>
+            document.getElementById('guardar').addEventListener('click', guardar);
+            recuperarLista();
+            function guardar() {
+                var contenido = document.getElementById('listacompra').innerHTML;
+                localStorage.setItem('lista', contenido);
+                alert('Lista guardada');
+            }
+            function recuperarLista() {
+                //LEER la lista del storage
+                var lista = localStorage.getItem('lista');
+                
+                //informar la lista del documento 
+                document.getElementById('listacompra').innerHTML = lista;
+            }
+            
+        </script>
+    </body>
+</html> 
+
+Ampliar
+
+javascript
+html
+css
+Compartir
+Mejora esta pregunta
+Seguir
+formulada el 18 jun. 2019 a las 8:20
+user avatar
+xavicoder
+34722 medallas de plata2020 medallas de bronce
+
+    2
+    Hay una pregunta en SO sobre el tema, al ser una pregunta tan directa ya que seria copy/paste no me parece buena idea responder con ella. Te dejo aqúi en enlace a dicha pregunta: Where the sessionStorage and localStorage stored?. Aclaro que como es una pregunta directa y son rutas locales no creo que haga falta traducción. – 
+    x3k
+    el 18 jun. 2019 a las 8:52 
+
+    4
+    @Parra te animo a que respondas aquí en SOes, aunque la respuesta exista, no está en nuestra comunidad en español, al final puedes citar la fuente dándole crédito al autor. – 
+    Jheyman Mejia
+    el 18 jun. 2019 a las 13:16
+
+Añade un comentario
+1 respuesta
+Ordenado por:
+3
+Pregunta Original: StackOverflow en Ingles - Respuesta de @NatureShade
+Firefox
+
+Firefox almacena el localstorage en el archivo webappsstore.sqlite en la carpeta perfil.
+Firefox (Windows XP):
+
+C:\Archivos de programa\<Usuario de windows>\Application Data\Mozilla\Firefox\Profiles\<carpeta del perfil>\webappsstore.sqlite
+
+Firefox (Windows Vista y superior):
+
+C:\Usuarios\<Usuario de windows>\AppData\Roaming\Mozilla\Firefox\Profiles\<carpeta del perfil>\webappsstore.sqlite
+
+o:
+
+%APPDATA%\Mozilla\Firefox\Profiles\<carpeta del perfil>\webappsstore.sqlite
+
+Firefox en linux:
+
+~/.mozilla/firefox/<carpeta del perfil>/webappsstore.sqlite
+
+Firefox en mac:
+
+~/Library/Application Support/Firefox/Profiles/<carpeta del perfil>/webappsstore.sqlite
+
+o:
+
+~/Library/Mozilla/Firefox/Profiles/<carpeta del perfil>/webappsstore.sqlite
+
+Chrome
+
+Chrome lo almacena en diferentes archivos dentro de la carpeta Local Storage.
+Chrome en windows:
+
+%LocalAppData%\Google\Chrome\User Data\Default\Local Storage\
+
+Chrome en linux:
+
+~/.config/google-chrome/Default/Local Storage/
+
+Chrome en mac:
+
+~/Library/Application Support/Google/Chrome/<Profile>/Local Storage/
+
+Comunmente:
+
+~/Library/Application Support/Google/Chrome/Default/Local Storage/
+
+Internet explorer:
+
+Comprobado, en mi caso NO está aquí. Si alguien conoce la ruta que edite la respuesta.
+
+%userprofile%\AppData\LocalLow\Microsoft\Internet Explorer\DOMStorage
+
+Opera
+
+C:\Usuarios\Administrador\AppData\Roaming\Opera\Opera\sessions\autosave.win
+
+o:
+
+C:\Usuarios\Administrador\AppData\Local\Opera\Opera\pstorage\
+
+
+
+
+Letras
+Hey, where did we go?
+Days when the rains came
+Down in the hollow
+Playin' a new game
+Laughin' and a-runnin', hey, hey
+Skippin' and a-jumpin'
+In the misty morning fog with
+Our, our hearts a-thumping and you
+My brown-eyed girl
+And you, my brown-eyed girl
+And whatever happened
+To Tuesday and so slow?
+Going down the old mine with a
+Transistor radio
+Standing in the sunlight laughing
+Hiding 'hind a rainbow's wall
+Slipping and sliding
+All along the waterfall with you
+My brown-eyed girl
+You, my brown-eyed girl
+Do you remember when we used to sing?
+Sha-la-la, la-la, la-la, la-la, la-la tee-da
+Just like that
+Sha-la-la, la-la, la-la, la-la, la-la tee-da, la-tee-da
+So hard to find my way
+Now that I'm all on my own
+I saw you just the other day
+My, how you have grown
+Cast my memory back there, Lord
+Sometimes I'm overcome thinking 'bout it
+Making love in the green grass
+Behind the stadium with you
+My brown-eyed girl
+You, my brown-eyed girl
+Do you remember when we used to sing?
+Sha-la-la, la-la, la-la, la-la, la-la tee-da
+Sha-la-la, la-la, la-la, la-la, la-la tee-da

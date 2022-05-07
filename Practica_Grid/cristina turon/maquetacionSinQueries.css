@@ -1,0 +1,90 @@
+/* Generales */
+html * {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Principal */
+.principal {
+    height: 100vh;
+}
+
+.principal > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: aquamarine;
+    padding: 2%;
+}
+
+/* Contenido */
+.contenido {
+    background-color: aliceblue;
+    flex-direction: column;
+}
+
+.contenido__img {
+    width: 100%;
+    height: auto;
+}
+
+/* Izquierda */
+.izquierda {
+    background-color: beige;
+}
+
+/* Anexos */
+.anexo1 {
+    background-color: goldenrod;
+}
+
+.anexo2 {
+    background-color: darkcyan;
+}
+
+/* Derecha */
+.derecha {
+    background-color: bisque;
+}
+
+/* Pie */
+.pie {
+    background-color: black;
+    color: white;
+}
+
+/*lo que seria de 600*/
+    .pie {
+        grid-column: 1 / -1;
+    }
+    .derecha {
+        grid-row: 3 / 4;
+    }
+    .contenido {
+        grid-column: span 2;
+    }
+    .cabecera {
+        grid-column: 1 / -1;
+    }
+    .principal {
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: 1fr 3fr 3fr 1fr;
+        grid-auto-rows: 22rem;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
